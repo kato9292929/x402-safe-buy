@@ -1,0 +1,65 @@
+{
+  "name": "@x402jp/safe-buy",
+  "version": "0.1.0",
+  "description": "Buy from an x402 (HTTP 402, USDC) seller safely: Probe check, price cap, payment reconciliation, refetch and Delivery Receipt verification. Also an MCP server.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp.d.ts",
+      "import": "./dist/mcp.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "x402-safe-buy-mcp": "dist/mcp-bin.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "x402",
+    "usdc",
+    "mcp",
+    "base",
+    "solana",
+    "payments",
+    "agent"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && chmod +x dist/mcp-bin.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --test --import tsx test/*.test.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "try": "tsx scripts/try.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@solana/kit": "^8.6.0",
+    "@x402/core": "^2.29.0",
+    "@x402/evm": "^2.29.0",
+    "@x402/extensions": "^2.29.0",
+    "@x402/svm": "^2.29.0",
+    "bs58": "^6.0.0",
+    "viem": "^2.57.14",
+    "zod": "^4.6.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
