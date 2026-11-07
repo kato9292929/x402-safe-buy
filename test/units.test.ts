@@ -4,7 +4,7 @@ import { test } from "node:test";
 import { atomicToUsd, inputRequirement, parse402, selectAccept, usdToAtomic, verifyReceipt } from "../src/index.js";
 import { checkBaseTransfer, topicAddr } from "../src/chains/base.js";
 import { buildReport } from "../src/report.js";
-import { encodeReceipt, receiptSigningBytes, sha256Hex, WELL_KNOWN_PATH } from "../src/vendor/delivery-receipt-verify.js";
+import { encodeReceipt, receiptSigningBytes, sha256Hex, WELL_KNOWN_PATH } from "@x402jp/delivery-receipt-verify";
 import { serve } from "./helpers.js";
 
 test("usdToAtomic / atomicToUsd", () => {

@@ -8,7 +8,7 @@ import {
   type WellKnown,
   parseWellKnown,
   verifyReceipt as verifyReceiptCore,
-} from "./vendor/delivery-receipt-verify.js";
+} from "@x402jp/delivery-receipt-verify";
 
 export { RECEIPT_HEADER, REFETCH_HEADER, WELL_KNOWN_PATH, type WellKnown };
 

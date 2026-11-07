@@ -19,7 +19,7 @@ import { type Price, atomicToUsd, usdToAtomic } from "./price.js";
 import { BAD_LAST_PAID, type ProbeDoc, hostOf, lookupProbe } from "./probe.js";
 import { RECEIPT_HEADER, type ReceiptCheck, checkReceipt, fetchReceiptKeys } from "./receipt.js";
 import { buildReport, sendReport } from "./report.js";
-import { encodeReceipt, refetch as refetchCore } from "./vendor/delivery-receipt-verify.js";
+import { encodeReceipt, refetch as refetchCore } from "@x402jp/delivery-receipt-verify";
 import { type Accept, type InputRequirement, type Parsed402, inputRequirement, parse402, selectAccept, x402Error } from "./x402.js";
 
 export type StageName = "probe" | "402" | "price" | "pay" | "reconcile" | "refetch" | "receipt" | "report";

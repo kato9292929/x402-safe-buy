@@ -3,7 +3,7 @@ import { generateKeyPairSync, sign } from "node:crypto";
 import { type IncomingMessage, type ServerResponse, createServer } from "node:http";
 import { AUTHORIZATION_USED, topicAddr } from "../src/chains/base.js";
 import { USDC } from "../src/constants.js";
-import { RECEIPT_HEADER, WELL_KNOWN_PATH, encodeReceipt, receiptSigningBytes, sha256Hex, type Receipt } from "../src/vendor/delivery-receipt-verify.js";
+import { RECEIPT_HEADER, WELL_KNOWN_PATH, encodeReceipt, receiptSigningBytes, sha256Hex, type Receipt } from "@x402jp/delivery-receipt-verify";
 
 export type Srv = { url: string; close: () => Promise<void> };
 

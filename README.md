@@ -99,7 +99,7 @@ npm test     # すべてオフライン（ローカル HTTP サーバーと RPC 
 npm run build
 ```
 
-`src/vendor/delivery-receipt-verify.ts` は kato9292929/delivery-receipt（915d02e）からの複製です。npm パッケージ `@x402jp/delivery-receipt-verify` の公開後に置き換えます。
+レシートの検証は npm の `@x402jp/delivery-receipt-verify`（kato9292929/delivery-receipt）を使います。
 
 ## ライセンス
 
